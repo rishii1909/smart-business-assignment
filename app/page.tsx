@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Counter } from "./components/counter/Counter";
+import { PokeSelector } from "./components/PokeSelector/PokeSelector";
+import { UsersTable } from "./components/UsersTable/UsersTable";
 
 export default function IndexPage() {
-  return <Counter />;
+  return (
+    <div className="flex flex-col space-y-2 h-svh justify-center">
+      <PokeSelector />
+      <UsersTable />
+    </div>
+  );
 }
 
 export const metadata: Metadata = {
-  title: "Redux Toolkit",
+  title: "Users management app",
 };
